@@ -7,7 +7,7 @@ TABLENAME=sftp_users
 export PGPASSWORD=$DBPASSWORD
 
 pg() {
-    echo "psql -h $DBHOST -U $DBUSER $DBNAME -tAc" "$@" >&2
+#    echo "psql -h $DBHOST -U $DBUSER $DBNAME -tAc" "$@" >&2
     psql -h $DBHOST -U $DBUSER $DBNAME -tAc "$@"
 }
 
@@ -40,7 +40,7 @@ do
     pg "SELECT uid, login from $TABLENAME where not fixed" | \
     while IFS="|" read uid login
     do
-        echo -n "Fixing $login ($uid) for sftp ... "
+        echo -n "Fixing filesystem for $login ($uid) ... "
 
         # Fix permissions/ownership of user homedir for SFTP access.
         mkdir -p /home/$login/uploads

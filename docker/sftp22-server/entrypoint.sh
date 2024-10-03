@@ -10,7 +10,7 @@ TABLENAME=sftp_users
 cat <<EOF > /etc/nss-pgsql.conf
 connectionstring = hostaddr=$DBIP dbname=$DBNAME user=$FTPDBUSER password=$FTPDBPASSWORD connect_timeout=2
 getpwnam = SELECT login AS username,"password" as passwd,login as gecos,'/home/' || login AS homedir,'Access by SFTP only' as shell,uid,uid as gid FROM $TABLENAME WHERE login = \$1
-getpwuid = SELECT login AS username,"password" as passwd,login as gecos,'/home/' || login AS homedir,'Access by SFTP only' as shell,uid,uid as gid FROM $TABLENAME WHERE AND uid = \$1
+getpwuid = SELECT login AS username,"password" as passwd,login as gecos,'/home/' || login AS homedir,'Access by SFTP only' as shell,uid,uid as gid FROM $TABLENAME WHERE uid = \$1
 getgroupmembersbygid = SELECT login AS username FROM $TABLENAME WHERE uid = \$1
 getgrnam = SELECT login AS groupname,'x',uid as gid,ARRAY[login] AS members FROM $TABLENAME WHERE login = \$1
 getgrgid = SELECT login AS groupname,'x',uid as gid,ARRAY[login] AS members FROM $TABLENAME WHERE uid = \$1
