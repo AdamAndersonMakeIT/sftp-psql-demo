@@ -29,7 +29,6 @@ services:
     depends_on:
       - db
     build: docker/sftp24-server
-#    image: ubuntu:24.04
     volumes:
       - sftp_home:/home
     ports:
