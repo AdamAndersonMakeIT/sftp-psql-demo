@@ -1,0 +1,47 @@
+version: "3"
+
+volumes:
+  sftp_home:
+
+services:
+
+  db:
+    image: postgres:16
+    volumes:
+      - ${PWD}/docker/db/initdb.sh:/docker-entrypoint-initdb.d/initdb.sh
+    ports:
+      - "5432:5432"
+    env_file:
+      - docker/dev.env
+
+  sftp22:
+    depends_on:
+      - db
+    build: docker/sftp22-server
+    volumes:
+      - sftp_home:/home
+    ports:
+      - "10022:22"
+    env_file:
+      - docker/dev.env
+
+#  sftp24:
+#    depends_on:
+#      - db
+#    build: docker/sftp24-server
+#    volumes:
+#      - sftp_home:/home
+#    ports:
+#      - "10024:22"
+#    env_file:
+#      - docker/dev.env
+
+  fixer:
+    depends_on:
+      - db
+    build: docker/fixer
+    volumes:
+      - sftp_home:/home
+    env_file:
+      - docker/dev.env
+
