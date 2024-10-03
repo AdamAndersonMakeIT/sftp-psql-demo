@@ -9,8 +9,8 @@ TABLENAME=sftp_users
 
 cat <<EOF > /etc/nss-pgsql.conf
 connectionstring = hostaddr=$DBIP dbname=$DBNAME user=$FTPDBUSER password=$FTPDBPASSWORD connect_timeout=2
-getpwnam = SELECT login AS username,"password" as passwd,login as gecos,'/home/' || login AS homedir,'Access by SFTP only' as shell,uid,uid as gid FROM $TABLENAME WHERE login = \$1
-getpwuid = SELECT login AS username,"password" as passwd,login as gecos,'/home/' || login AS homedir,'Access by SFTP only' as shell,uid,uid as gid FROM $TABLENAME WHERE uid = \$1
+getpwnam = SELECT login AS username,"password" as passwd,login as gecos,'/home/' || login AS homedir,'/bin/bash' as shell,uid,uid as gid FROM $TABLENAME WHERE login = \$1
+getpwuid = SELECT login AS username,"password" as passwd,login as gecos,'/home/' || login AS homedir,'/bin/bash' as shell,uid,uid as gid FROM $TABLENAME WHERE uid = \$1
 getgroupmembersbygid = SELECT login AS username FROM $TABLENAME WHERE uid = \$1
 getgrnam = SELECT login AS groupname,'x',uid as gid,ARRAY[login] AS members FROM $TABLENAME WHERE login = \$1
 getgrgid = SELECT login AS groupname,'x',uid as gid,ARRAY[login] AS members FROM $TABLENAME WHERE uid = \$1
@@ -41,14 +41,14 @@ EOF
 sed -i '/Subsystem/d' /etc/ssh/sshd_config
 sed -i '/X11Forwarding/d' /etc/ssh/sshd_config
 sed -i '/AllowTcpForwarding/d' /etc/ssh/sshd_config
-#sed -i '/ForceCommand/d' /etc/ssh/sshd_config
+sed -i '/ForceCommand/d' /etc/ssh/sshd_config
 sed -i '/ChrootDirectory/d' /etc/ssh/sshd_config
 sed -i '/LogLevel/d' /etc/ssh/sshd_config
 
 echo Subsystem sftp internal-sftp >> /etc/ssh/sshd_config
 echo X11Forwarding no >> /etc/ssh/sshd_config
 echo AllowTcpForwarding no >> /etc/ssh/sshd_config
-#echo ForceCommand internal-sftp >> /etc/ssh/sshd_config
+echo ForceCommand internal-sftp >> /etc/ssh/sshd_config
 echo ChrootDirectory /home/%u >> /etc/ssh/sshd_config
 echo LogLevel VERBOSE >> /etc/ssh/sshd_config
 
