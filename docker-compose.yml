@@ -25,16 +25,16 @@ services:
     env_file:
       - docker/dev.env
 
-#  sftp24:
-#    depends_on:
-#      - db
-#    build: docker/sftp24-server
-#    volumes:
-#      - sftp_home:/home
-#    ports:
-#      - "10024:22"
-#    env_file:
-#      - docker/dev.env
+  sftp24:
+    depends_on:
+      - db
+    build: docker/sftp24-server
+    volumes:
+      - sftp_home:/home
+    ports:
+      - "10024:22"
+    env_file:
+      - docker/dev.env
 
   fixer:
     depends_on:
