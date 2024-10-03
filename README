@@ -1,4 +1,4 @@
 
-1. run docker compose up and observe that you can use SFTP like: sftp -P 10022 test@localhost # Password123
+1. run docker compose up and observe that you can use SFTP like: sftp -P 10022 test@localhost # test
 2. upgrade or copy the ubuntu 22 sftp server to ubuntu 24, edit docker-compose.yml accordingly.
 3. Bug: you cannot use SFTP on port 10024

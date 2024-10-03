@@ -11,6 +11,7 @@ create database $DBNAME with owner $DBUSER;
 EOSQL
 
   echo Created database user $DBUSER with password: $DBPASSWORD
+  echo
 
   export PGPASSWORD=$DBPASSWORD
   psql -v ON_ERROR_STOP=1 -U "$DBUSER" $DBNAME <<-EOSQL
@@ -24,9 +25,9 @@ create table sftp_users (
   fixed boolean not null default false
 );
 
-insert into sftp_users (login, password) values ('test', crypt('Password123',gen_salt('md5')));
+insert into sftp_users (login, password) values ('test', crypt('test',gen_salt('md5')));
 
 EOSQL
 
-  echo Created Table sftp_users and added SFTP user test with password: Password123
+  echo Created Table sftp_users and added SFTP user test with password: test
 fi
