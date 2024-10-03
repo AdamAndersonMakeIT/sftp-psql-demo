@@ -32,11 +32,10 @@ do
 done
 echo postgres is ready
 
-while sleep 10
-do
-    touch "$running"
+fix() {
 
     # Find users that aren't fixed and fix them.
+
     pg "SELECT uid, login from $TABLENAME where not fixed" | \
     while IFS="|" read uid login
     do
@@ -52,7 +51,15 @@ do
         psql -tA -h $DBHOST -U $DBUSER $DBNAME \
           -c "UPDATE $TABLENAME SET fixed = true WHERE uid = $uid"
     done
+}
 
+touch "$running"
+fix
+
+while sleep 60
+do
+    touch "$running"
+    fix
 done
 
 echo filesystem fixer is exiting.

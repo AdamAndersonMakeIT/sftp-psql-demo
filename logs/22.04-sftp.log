@@ -1,0 +1,355 @@
+sftp-psql-demo-sftp22-1  | debug3: fd 5 is not O_NONBLOCK
+sftp-psql-demo-sftp22-1  | debug1: Server will not fork when running in debugging mode.
+sftp-psql-demo-sftp22-1  | debug3: send_rexec_state: entering fd = 8 config len 3282
+sftp-psql-demo-sftp22-1  | debug3: ssh_msg_send: type 0
+sftp-psql-demo-sftp22-1  | debug3: send_rexec_state: done
+sftp-psql-demo-sftp22-1  | debug1: rexec start in 5 out 5 newsock 5 pipe -1 sock 8
+sftp-psql-demo-sftp22-1  | debug3: recv_rexec_state: entering fd = 5
+sftp-psql-demo-sftp22-1  | debug3: ssh_msg_recv entering
+sftp-psql-demo-sftp22-1  | debug3: recv_rexec_state: done
+sftp-psql-demo-sftp22-1  | debug2: parse_server_config_depth: config rexec len 3282
+sftp-psql-demo-sftp22-1  | debug2: parse_server_config_depth: config  len 0
+sftp-psql-demo-sftp22-1  | debug3: rexec:62 setting KbdInteractiveAuthentication no
+sftp-psql-demo-sftp22-1  | debug3: rexec:85 setting UsePAM yes
+sftp-psql-demo-sftp22-1  | debug3: rexec:90 setting X11Forwarding yes
+sftp-psql-demo-sftp22-1  | debug3: rexec:94 setting PrintMotd no
+sftp-psql-demo-sftp22-1  | debug3: rexec:112 setting AcceptEnv LANG LC_*
+sftp-psql-demo-sftp22-1  | debug3: rexec:122 setting Subsystem sftp internal-sftp
+sftp-psql-demo-sftp22-1  | debug3: rexec:123 setting ChrootDirectory /home/%u
+sftp-psql-demo-sftp22-1  | debug3: rexec:124 setting LogLevel VERBOSE
+sftp-psql-demo-sftp22-1  | debug1: sshd version OpenSSH_8.9, OpenSSL 3.0.2 15 Mar 2022
+sftp-psql-demo-sftp22-1  | debug1: private host key #0: ssh-rsa SHA256:EOHqqlLiT/wN0LXn80bAQmDGqm40/bJ1gKioOXZTN1c
+sftp-psql-demo-sftp22-1  | debug1: private host key #1: ecdsa-sha2-nistp256 SHA256:1ITwRefG6zf3bFx/I6DvSlziuF4z+sFdE8rDT05jIf8
+sftp-psql-demo-sftp22-1  | debug1: private host key #2: ssh-ed25519 SHA256:Vhd/VWjwFq+IrvUiYmYS/tIwKByjnOv9yc4BqPcXibA
+sftp-psql-demo-sftp22-1  | debug1: inetd sockets after dupping: 3, 3
+sftp-psql-demo-sftp22-1  | Connection from 192.168.48.1 port 53986 on 192.168.48.5 port 22 rdomain ""
+sftp-psql-demo-sftp22-1  | debug1: Local version string SSH-2.0-OpenSSH_8.9p1 Ubuntu-3ubuntu0.10
+sftp-psql-demo-sftp22-1  | debug1: Remote protocol version 2.0, remote software version OpenSSH_8.9p1 Ubuntu-3ubuntu0.10
+sftp-psql-demo-sftp22-1  | debug1: compat_banner: match: OpenSSH_8.9p1 Ubuntu-3ubuntu0.10 pat OpenSSH* compat 0x04000000
+sftp-psql-demo-sftp22-1  | debug2: fd 3 setting O_NONBLOCK
+sftp-psql-demo-sftp22-1  | debug3: ssh_sandbox_init: preparing seccomp filter sandbox
+sftp-psql-demo-sftp22-1  | debug2: Network child is on pid 31
+sftp-psql-demo-sftp22-1  | debug3: preauth child monitor started
+sftp-psql-demo-sftp22-1  | debug3: privsep user:group 101:65534 [preauth]
+sftp-psql-demo-sftp22-1  | debug1: permanently_set_uid: 101/65534 [preauth]
+sftp-psql-demo-sftp22-1  | debug3: ssh_sandbox_child: setting PR_SET_NO_NEW_PRIVS [preauth]
+sftp-psql-demo-sftp22-1  | debug3: ssh_sandbox_child: attaching seccomp filter program [preauth]
+sftp-psql-demo-sftp22-1  | debug3: append_hostkey_type: ssh-rsa key not permitted by HostkeyAlgorithms [preauth]
+sftp-psql-demo-sftp22-1  | debug1: list_hostkey_types: rsa-sha2-512,rsa-sha2-256,ecdsa-sha2-nistp256,ssh-ed25519 [preauth]
+sftp-psql-demo-sftp22-1  | debug3: send packet: type 20 [preauth]
+sftp-psql-demo-sftp22-1  | debug1: SSH2_MSG_KEXINIT sent [preauth]
+sftp-psql-demo-sftp22-1  | debug3: receive packet: type 20 [preauth]
+sftp-psql-demo-sftp22-1  | debug1: SSH2_MSG_KEXINIT received [preauth]
+sftp-psql-demo-sftp22-1  | debug2: local server KEXINIT proposal [preauth]
+sftp-psql-demo-sftp22-1  | debug2: KEX algorithms: curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,sntrup761x25519-sha512@openssh.com,diffie-hellman-group-exchange-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group14-sha256,kex-strict-s-v00@openssh.com [preauth]
+sftp-psql-demo-sftp22-1  | debug2: host key algorithms: rsa-sha2-512,rsa-sha2-256,ecdsa-sha2-nistp256,ssh-ed25519 [preauth]
+sftp-psql-demo-sftp22-1  | debug2: ciphers ctos: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com [preauth]
+sftp-psql-demo-sftp22-1  | debug2: ciphers stoc: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com [preauth]
+sftp-psql-demo-sftp22-1  | debug2: MACs ctos: umac-64-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,umac-64@openssh.com,umac-128@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1 [preauth]
+sftp-psql-demo-sftp22-1  | debug2: MACs stoc: umac-64-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,umac-64@openssh.com,umac-128@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1 [preauth]
+sftp-psql-demo-sftp22-1  | debug2: compression ctos: none,zlib@openssh.com [preauth]
+sftp-psql-demo-sftp22-1  | debug2: compression stoc: none,zlib@openssh.com [preauth]
+sftp-psql-demo-sftp22-1  | debug2: languages ctos:  [preauth]
+sftp-psql-demo-sftp22-1  | debug2: languages stoc:  [preauth]
+sftp-psql-demo-sftp22-1  | debug2: first_kex_follows 0  [preauth]
+sftp-psql-demo-sftp22-1  | debug2: reserved 0  [preauth]
+sftp-psql-demo-sftp22-1  | debug2: peer client KEXINIT proposal [preauth]
+sftp-psql-demo-sftp22-1  | debug2: KEX algorithms: curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,sntrup761x25519-sha512@openssh.com,diffie-hellman-group-exchange-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group14-sha256,ext-info-c,kex-strict-c-v00@openssh.com [preauth]
+sftp-psql-demo-sftp22-1  | debug2: host key algorithms: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,sk-ssh-ed25519-cert-v01@openssh.com,sk-ecdsa-sha2-nistp256-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ssh-ed25519,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,sk-ssh-ed25519@openssh.com,sk-ecdsa-sha2-nistp256@openssh.com,rsa-sha2-512,rsa-sha2-256 [preauth]
+sftp-psql-demo-sftp22-1  | debug2: ciphers ctos: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com [preauth]
+sftp-psql-demo-sftp22-1  | debug2: ciphers stoc: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com [preauth]
+sftp-psql-demo-sftp22-1  | debug2: MACs ctos: umac-64-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,umac-64@openssh.com,umac-128@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1 [preauth]
+sftp-psql-demo-sftp22-1  | debug2: MACs stoc: umac-64-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,umac-64@openssh.com,umac-128@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1 [preauth]
+sftp-psql-demo-sftp22-1  | debug2: compression ctos: none,zlib@openssh.com,zlib [preauth]
+sftp-psql-demo-sftp22-1  | debug2: compression stoc: none,zlib@openssh.com,zlib [preauth]
+sftp-psql-demo-sftp22-1  | debug2: languages ctos:  [preauth]
+sftp-psql-demo-sftp22-1  | debug2: languages stoc:  [preauth]
+sftp-psql-demo-sftp22-1  | debug2: first_kex_follows 0  [preauth]
+sftp-psql-demo-sftp22-1  | debug2: reserved 0  [preauth]
+sftp-psql-demo-sftp22-1  | debug3: kex_choose_conf: will use strict KEX ordering [preauth]
+sftp-psql-demo-sftp22-1  | debug1: kex: algorithm: curve25519-sha256 [preauth]
+sftp-psql-demo-sftp22-1  | debug1: kex: host key algorithm: ssh-ed25519 [preauth]
+sftp-psql-demo-sftp22-1  | debug1: kex: client->server cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none [preauth]
+sftp-psql-demo-sftp22-1  | debug1: kex: server->client cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none [preauth]
+sftp-psql-demo-sftp22-1  | debug1: expecting SSH2_MSG_KEX_ECDH_INIT [preauth]
+sftp-psql-demo-sftp22-1  | debug3: receive packet: type 30 [preauth]
+sftp-psql-demo-sftp22-1  | debug1: SSH2_MSG_KEX_ECDH_INIT received [preauth]
+sftp-psql-demo-sftp22-1  | debug3: mm_sshkey_sign: entering [preauth]
+sftp-psql-demo-sftp22-1  | debug3: mm_request_send: entering, type 6 [preauth]
+sftp-psql-demo-sftp22-1  | debug3: mm_sshkey_sign: waiting for MONITOR_ANS_SIGN [preauth]
+sftp-psql-demo-sftp22-1  | debug3: mm_request_receive_expect: entering, type 7 [preauth]
+sftp-psql-demo-sftp22-1  | debug3: mm_request_receive: entering [preauth]
+sftp-psql-demo-sftp22-1  | debug3: mm_request_receive: entering
+sftp-psql-demo-sftp22-1  | debug3: monitor_read: checking request 6
+sftp-psql-demo-sftp22-1  | debug3: mm_answer_sign: entering
+sftp-psql-demo-sftp22-1  | debug3: mm_answer_sign: ssh-ed25519 KEX signature len=83
+sftp-psql-demo-sftp22-1  | debug3: mm_request_send: entering, type 7
+sftp-psql-demo-sftp22-1  | debug2: monitor_read: 6 used once, disabling now
+sftp-psql-demo-sftp22-1  | debug3: send packet: type 31 [preauth]
+sftp-psql-demo-sftp22-1  | debug3: send packet: type 21 [preauth]
+sftp-psql-demo-sftp22-1  | debug1: ssh_packet_send2_wrapped: resetting send seqnr 3 [preauth]
+sftp-psql-demo-sftp22-1  | debug2: ssh_set_newkeys: mode 1 [preauth]
+sftp-psql-demo-sftp22-1  | debug1: rekey out after 134217728 blocks [preauth]
+sftp-psql-demo-sftp22-1  | debug1: SSH2_MSG_NEWKEYS sent [preauth]
+sftp-psql-demo-sftp22-1  | debug1: Sending SSH2_MSG_EXT_INFO [preauth]
+sftp-psql-demo-sftp22-1  | debug3: send packet: type 7 [preauth]
+sftp-psql-demo-sftp22-1  | debug1: expecting SSH2_MSG_NEWKEYS [preauth]
+sftp-psql-demo-sftp22-1  | debug3: receive packet: type 21 [preauth]
+sftp-psql-demo-sftp22-1  | debug1: ssh_packet_read_poll2: resetting read seqnr 3 [preauth]
+sftp-psql-demo-sftp22-1  | debug1: SSH2_MSG_NEWKEYS received [preauth]
+sftp-psql-demo-sftp22-1  | debug2: ssh_set_newkeys: mode 0 [preauth]
+sftp-psql-demo-sftp22-1  | debug1: rekey in after 134217728 blocks [preauth]
+sftp-psql-demo-sftp22-1  | debug1: KEX done [preauth]
+sftp-psql-demo-sftp22-1  | debug3: receive packet: type 5 [preauth]
+sftp-psql-demo-sftp22-1  | debug3: send packet: type 6 [preauth]
+sftp-psql-demo-sftp22-1  | debug3: receive packet: type 50 [preauth]
+sftp-psql-demo-sftp22-1  | debug1: userauth-request for user test service ssh-connection method none [preauth]
+sftp-psql-demo-sftp22-1  | debug1: attempt 0 failures 0 [preauth]
+sftp-psql-demo-sftp22-1  | debug3: mm_getpwnamallow: entering [preauth]
+sftp-psql-demo-sftp22-1  | debug3: mm_request_send: entering, type 8 [preauth]
+sftp-psql-demo-sftp22-1  | debug3: mm_getpwnamallow: waiting for MONITOR_ANS_PWNAM [preauth]
+sftp-psql-demo-sftp22-1  | debug3: mm_request_receive_expect: entering, type 9 [preauth]
+sftp-psql-demo-sftp22-1  | debug3: mm_request_receive: entering [preauth]
+sftp-psql-demo-sftp22-1  | debug3: mm_request_receive: entering
+sftp-psql-demo-sftp22-1  | debug3: monitor_read: checking request 8
+sftp-psql-demo-sftp22-1  | debug3: mm_answer_pwnamallow: entering
+sftp-psql-demo-sftp22-1  | debug2: parse_server_config_depth: config reprocess config len 3282
+sftp-psql-demo-sftp22-1  | debug2: parse_server_config_depth: config  len 0
+sftp-psql-demo-db-1      | 2024-10-03 15:38:24.494 MST [36] LOG:  execute <unnamed>: SELECT login AS username,"password" as passwd,login as gecos,'/home/' || login AS homedir,'Access by SFTP only' as shell,uid,uid as gid FROM sftp_users WHERE login = $1
+sftp-psql-demo-db-1      | 2024-10-03 15:38:24.494 MST [36] DETAIL:  parameters: $1 = 'test'
+sftp-psql-demo-sftp22-1  | debug3: mm_answer_pwnamallow: sending MONITOR_ANS_PWNAM: 1
+sftp-psql-demo-sftp22-1  | debug3: mm_request_send: entering, type 9
+sftp-psql-demo-sftp22-1  | debug2: monitor_read: 8 used once, disabling now
+sftp-psql-demo-sftp22-1  | debug2: input_userauth_request: setting up authctxt for test [preauth]
+sftp-psql-demo-sftp22-1  | debug3: mm_start_pam entering [preauth]
+sftp-psql-demo-sftp22-1  | debug3: mm_request_send: entering, type 100 [preauth]
+sftp-psql-demo-sftp22-1  | debug3: mm_inform_authserv: entering [preauth]
+sftp-psql-demo-sftp22-1  | debug3: mm_request_send: entering, type 4 [preauth]
+sftp-psql-demo-sftp22-1  | debug2: input_userauth_request: try method none [preauth]
+sftp-psql-demo-sftp22-1  | debug3: user_specific_delay: user specific delay 0.000ms [preauth]
+sftp-psql-demo-sftp22-1  | debug3: ensure_minimum_time_since: elapsed 22.373ms, delaying 10.536ms (requested 8.227ms) [preauth]
+sftp-psql-demo-sftp22-1  | debug3: mm_request_receive: entering
+sftp-psql-demo-sftp22-1  | debug3: monitor_read: checking request 100
+sftp-psql-demo-sftp22-1  | debug1: PAM: initializing for "test"
+sftp-psql-demo-sftp22-1  | debug1: PAM: setting PAM_RHOST to "192.168.48.1"
+sftp-psql-demo-sftp22-1  | debug1: PAM: setting PAM_TTY to "ssh"
+sftp-psql-demo-sftp22-1  | debug2: monitor_read: 100 used once, disabling now
+sftp-psql-demo-sftp22-1  | debug3: mm_request_receive: entering
+sftp-psql-demo-sftp22-1  | debug3: monitor_read: checking request 4
+sftp-psql-demo-sftp22-1  | debug3: mm_answer_authserv: service=ssh-connection, style=, role=
+sftp-psql-demo-sftp22-1  | debug2: monitor_read: 4 used once, disabling now
+sftp-psql-demo-sftp22-1  | debug3: userauth_finish: failure partial=0 next methods="publickey,password" [preauth]
+sftp-psql-demo-sftp22-1  | debug3: send packet: type 51 [preauth]
+sftp-psql-demo-sftp22-1  | debug3: receive packet: type 50 [preauth]
+sftp-psql-demo-sftp22-1  | debug1: userauth-request for user test service ssh-connection method publickey [preauth]
+sftp-psql-demo-sftp22-1  | debug1: attempt 1 failures 0 [preauth]
+sftp-psql-demo-sftp22-1  | debug2: input_userauth_request: try method publickey [preauth]
+sftp-psql-demo-sftp22-1  | debug2: userauth_pubkey: valid user test querying public key rsa-sha2-512 AAAAB3NzaC1yc2EAAAADAQABAAABAQC89c5CYdxTRkKtYhr1/RGJqaxyGI3FWU3M8hwoGP95nv6f0bBoDMIjOZur9w/d+x3qyl7fhnfzbAqaYnl0I3+a1/Jy8R8461Rz/vGXwaLf04zb+cjnj6umvTcLbcYNeJGxdPt6kAtTEeI2hZJaLlz5wxYqHu6/nFzt9PlssIIetuIzdQq9sTEMHcp4l9vCYPhcCpFTrnhpuS7zf9luQLwgKJt9uTo2zF/5lgCsmGxAEISshOAaSEq368fcCpPaM2TuKP8PIENLRt0gkyFFQG7U2wv0aeQ3OpLZV8qHrMXm8jiELSfB3rEfPBgs64RayLc49GDDaUAZiwpgfgG11Ufp [preauth]
+sftp-psql-demo-sftp22-1  | debug1: userauth_pubkey: publickey test pkalg rsa-sha2-512 pkblob RSA SHA256:b2pxuFuee6Ui1j9d1RefDjlzYM9iH9mx8H99OrraIuw [preauth]
+sftp-psql-demo-sftp22-1  | debug3: mm_key_allowed: entering [preauth]
+sftp-psql-demo-sftp22-1  | debug3: mm_request_send: entering, type 22 [preauth]
+sftp-psql-demo-sftp22-1  | debug3: mm_key_allowed: waiting for MONITOR_ANS_KEYALLOWED [preauth]
+sftp-psql-demo-sftp22-1  | debug3: mm_request_receive_expect: entering, type 23 [preauth]
+sftp-psql-demo-sftp22-1  | debug3: mm_request_receive: entering [preauth]
+sftp-psql-demo-sftp22-1  | debug3: mm_request_receive: entering
+sftp-psql-demo-sftp22-1  | debug3: monitor_read: checking request 22
+sftp-psql-demo-sftp22-1  | debug3: mm_answer_keyallowed: entering
+sftp-psql-demo-sftp22-1  | debug1: temporarily_use_uid: 1982/1982 (e=0/0)
+sftp-psql-demo-db-1      | 2024-10-03 15:38:24.522 MST [37] LOG:  execute <unnamed>: SELECT uid AS gid FROM sftp_users WHERE login = $1 AND uid <> $2
+sftp-psql-demo-db-1      | 2024-10-03 15:38:24.522 MST [37] DETAIL:  parameters: $1 = 'test', $2 = '1982'
+sftp-psql-demo-sftp22-1  | debug1: trying public key file /home/test/.ssh/authorized_keys
+sftp-psql-demo-sftp22-1  | debug1: Could not open authorized keys '/home/test/.ssh/authorized_keys': No such file or directory
+sftp-psql-demo-sftp22-1  | debug1: restore_uid: 0/0
+sftp-psql-demo-sftp22-1  | debug1: temporarily_use_uid: 1982/1982 (e=0/0)
+sftp-psql-demo-sftp22-1  | debug1: trying public key file /home/test/.ssh/authorized_keys2
+sftp-psql-demo-sftp22-1  | debug1: Could not open authorized keys '/home/test/.ssh/authorized_keys2': No such file or directory
+sftp-psql-demo-sftp22-1  | debug1: restore_uid: 0/0
+sftp-psql-demo-sftp22-1  | debug3: mm_answer_keyallowed: publickey authentication test: RSA key is not allowed
+sftp-psql-demo-sftp22-1  | Failed publickey for test from 192.168.48.1 port 53986 ssh2: RSA SHA256:b2pxuFuee6Ui1j9d1RefDjlzYM9iH9mx8H99OrraIuw
+sftp-psql-demo-sftp22-1  | debug3: mm_request_send: entering, type 23
+sftp-psql-demo-sftp22-1  | debug2: userauth_pubkey: authenticated 0 pkalg rsa-sha2-512 [preauth]
+sftp-psql-demo-sftp22-1  | debug3: user_specific_delay: user specific delay 0.000ms [preauth]
+sftp-psql-demo-sftp22-1  | debug3: ensure_minimum_time_since: elapsed 16.914ms, delaying 15.994ms (requested 8.227ms) [preauth]
+sftp-psql-demo-sftp22-1  | debug3: userauth_finish: failure partial=0 next methods="publickey,password" [preauth]
+sftp-psql-demo-sftp22-1  | debug3: send packet: type 51 [preauth]
+sftp-psql-demo-sftp22-1  | debug3: receive packet: type 50 [preauth]
+sftp-psql-demo-sftp22-1  | debug1: userauth-request for user test service ssh-connection method password [preauth]
+sftp-psql-demo-sftp22-1  | debug1: attempt 2 failures 1 [preauth]
+sftp-psql-demo-sftp22-1  | debug2: input_userauth_request: try method password [preauth]
+sftp-psql-demo-sftp22-1  | debug3: mm_auth_password: entering [preauth]
+sftp-psql-demo-sftp22-1  | debug3: mm_request_send: entering, type 12 [preauth]
+sftp-psql-demo-sftp22-1  | debug3: mm_auth_password: waiting for MONITOR_ANS_AUTHPASSWORD [preauth]
+sftp-psql-demo-sftp22-1  | debug3: mm_request_receive_expect: entering, type 13 [preauth]
+sftp-psql-demo-sftp22-1  | debug3: mm_request_receive: entering [preauth]
+sftp-psql-demo-sftp22-1  | debug3: mm_request_receive: entering
+sftp-psql-demo-sftp22-1  | debug3: monitor_read: checking request 12
+sftp-psql-demo-sftp22-1  | debug3: PAM: sshpam_passwd_conv called with 1 messages
+sftp-psql-demo-db-1      | 2024-10-03 15:38:28.435 MST [38] LOG:  execute <unnamed>: select password from sftp_users where login = $1
+sftp-psql-demo-db-1      | 2024-10-03 15:38:28.435 MST [38] DETAIL:  parameters: $1 = 'test'
+sftp-psql-demo-sftp22-1  | debug1: PAM: password authentication accepted for test
+sftp-psql-demo-sftp22-1  | debug3: mm_answer_authpassword: sending result 1
+sftp-psql-demo-sftp22-1  | debug3: mm_answer_authpassword: sending result 1
+sftp-psql-demo-sftp22-1  | debug3: mm_request_send: entering, type 13
+sftp-psql-demo-sftp22-1  | debug3: mm_request_receive_expect: entering, type 102
+sftp-psql-demo-sftp22-1  | debug3: mm_request_receive: entering
+sftp-psql-demo-sftp22-1  | debug1: do_pam_account: called
+sftp-psql-demo-sftp22-1  | debug2: do_pam_account: auth information in SSH_AUTH_INFO_0
+sftp-psql-demo-sftp22-1  | debug3: PAM: do_pam_account pam_acct_mgmt = 0 (Success)
+sftp-psql-demo-sftp22-1  | debug3: mm_request_send: entering, type 103
+sftp-psql-demo-sftp22-1  | Accepted password for test from 192.168.48.1 port 53986 ssh2
+sftp-psql-demo-sftp22-1  | debug1: monitor_child_preauth: user test authenticated by privileged process
+sftp-psql-demo-sftp22-1  | debug3: mm_get_keystate: Waiting for new keys
+sftp-psql-demo-sftp22-1  | debug3: mm_request_receive_expect: entering, type 26
+sftp-psql-demo-sftp22-1  | debug3: mm_request_receive: entering
+sftp-psql-demo-sftp22-1  | debug3: mm_get_keystate: GOT new keys
+sftp-psql-demo-sftp22-1  | debug3: mm_auth_password: user authenticated [preauth]
+sftp-psql-demo-sftp22-1  | debug3: user_specific_delay: user specific delay 0.000ms [preauth]
+sftp-psql-demo-sftp22-1  | debug3: ensure_minimum_time_since: elapsed 13.275ms, delaying 3.179ms (requested 8.227ms) [preauth]
+sftp-psql-demo-sftp22-1  | debug3: mm_do_pam_account entering [preauth]
+sftp-psql-demo-sftp22-1  | debug3: mm_request_send: entering, type 102 [preauth]
+sftp-psql-demo-sftp22-1  | debug3: mm_request_receive_expect: entering, type 103 [preauth]
+sftp-psql-demo-sftp22-1  | debug3: mm_request_receive: entering [preauth]
+sftp-psql-demo-sftp22-1  | debug3: mm_do_pam_account returning 1 [preauth]
+sftp-psql-demo-sftp22-1  | debug3: send packet: type 52 [preauth]
+sftp-psql-demo-sftp22-1  | debug3: mm_request_send: entering, type 26 [preauth]
+sftp-psql-demo-sftp22-1  | debug3: mm_send_keystate: Finished sending state [preauth]
+sftp-psql-demo-sftp22-1  | debug1: monitor_read_log: child log fd closed
+sftp-psql-demo-sftp22-1  | debug3: ssh_sandbox_parent_finish: finished
+sftp-psql-demo-sftp22-1  | debug1: PAM: establishing credentials
+sftp-psql-demo-sftp22-1  | debug3: PAM: opening session
+sftp-psql-demo-sftp22-1  | debug2: do_pam_session: auth information in SSH_AUTH_INFO_0
+sftp-psql-demo-sftp22-1  | User child is on pid 32
+sftp-psql-demo-sftp22-1  | debug1: SELinux support disabled
+sftp-psql-demo-db-1      | 2024-10-03 15:38:28.456 MST [39] LOG:  execute <unnamed>: SELECT uid AS gid FROM sftp_users WHERE login = $1 AND uid <> $2
+sftp-psql-demo-db-1      | 2024-10-03 15:38:28.456 MST [39] DETAIL:  parameters: $1 = 'test', $2 = '1982'
+sftp-psql-demo-sftp22-1  | debug1: PAM: establishing credentials
+sftp-psql-demo-sftp22-1  | debug3: safely_chroot: checking '/'
+sftp-psql-demo-sftp22-1  | debug3: safely_chroot: checking '/home/'
+sftp-psql-demo-sftp22-1  | debug3: safely_chroot: checking '/home/test'
+sftp-psql-demo-sftp22-1  | Changed root directory to "/home/test"
+sftp-psql-demo-sftp22-1  | debug1: permanently_set_uid: 1982/1982
+sftp-psql-demo-sftp22-1  | debug3: monitor_apply_keystate: packet_set_state
+sftp-psql-demo-sftp22-1  | debug2: ssh_set_newkeys: mode 0
+sftp-psql-demo-sftp22-1  | debug1: rekey in after 134217728 blocks
+sftp-psql-demo-sftp22-1  | debug2: ssh_set_newkeys: mode 1
+sftp-psql-demo-sftp22-1  | debug1: rekey out after 134217728 blocks
+sftp-psql-demo-sftp22-1  | debug1: ssh_packet_set_postauth: called
+sftp-psql-demo-sftp22-1  | debug3: ssh_packet_set_state: done
+sftp-psql-demo-sftp22-1  | debug3: notify_hostkeys: key 0: ssh-rsa SHA256:EOHqqlLiT/wN0LXn80bAQmDGqm40/bJ1gKioOXZTN1c
+sftp-psql-demo-sftp22-1  | debug3: notify_hostkeys: key 1: ecdsa-sha2-nistp256 SHA256:1ITwRefG6zf3bFx/I6DvSlziuF4z+sFdE8rDT05jIf8
+sftp-psql-demo-sftp22-1  | debug3: notify_hostkeys: key 2: ssh-ed25519 SHA256:Vhd/VWjwFq+IrvUiYmYS/tIwKByjnOv9yc4BqPcXibA
+sftp-psql-demo-sftp22-1  | debug3: notify_hostkeys: sent 3 hostkeys
+sftp-psql-demo-sftp22-1  | debug3: send packet: type 80
+sftp-psql-demo-sftp22-1  | debug1: active: key options: agent-forwarding port-forwarding pty user-rc x11-forwarding
+sftp-psql-demo-sftp22-1  | debug1: Entering interactive session for SSH2.
+sftp-psql-demo-sftp22-1  | debug1: server_init_dispatch
+sftp-psql-demo-sftp22-1  | debug3: receive packet: type 90
+sftp-psql-demo-sftp22-1  | debug1: server_input_channel_open: ctype session rchan 0 win 1048576 max 16384
+sftp-psql-demo-sftp22-1  | debug1: input_session_request
+sftp-psql-demo-sftp22-1  | debug1: channel 0: new [server-session]
+sftp-psql-demo-sftp22-1  | debug2: session_new: allocate (allocated 0 max 10)
+sftp-psql-demo-sftp22-1  | debug3: session_unused: session id 0 unused
+sftp-psql-demo-sftp22-1  | debug1: session_new: session 0
+sftp-psql-demo-sftp22-1  | debug1: session_open: channel 0
+sftp-psql-demo-sftp22-1  | debug1: session_open: session 0: link with channel 0
+sftp-psql-demo-sftp22-1  | debug1: server_input_channel_open: confirm session
+sftp-psql-demo-sftp22-1  | debug3: send packet: type 91
+sftp-psql-demo-sftp22-1  | debug3: receive packet: type 80
+sftp-psql-demo-sftp22-1  | debug1: server_input_global_request: rtype no-more-sessions@openssh.com want_reply 0
+sftp-psql-demo-sftp22-1  | debug3: receive packet: type 98
+sftp-psql-demo-sftp22-1  | debug1: server_input_channel_req: channel 0 request pty-req reply 1
+sftp-psql-demo-sftp22-1  | debug1: session_by_channel: session 0 channel 0
+sftp-psql-demo-sftp22-1  | debug1: session_input_channel_req: session 0 req pty-req
+sftp-psql-demo-sftp22-1  | debug1: Allocating pty.
+sftp-psql-demo-sftp22-1  | debug3: mm_request_send: entering, type 28
+sftp-psql-demo-sftp22-1  | debug3: mm_pty_allocate: waiting for MONITOR_ANS_PTY
+sftp-psql-demo-sftp22-1  | debug3: mm_request_receive_expect: entering, type 29
+sftp-psql-demo-sftp22-1  | debug3: mm_request_receive: entering
+sftp-psql-demo-sftp22-1  | debug3: mm_request_receive: entering
+sftp-psql-demo-sftp22-1  | debug3: monitor_read: checking request 28
+sftp-psql-demo-sftp22-1  | debug3: mm_answer_pty: entering
+sftp-psql-demo-sftp22-1  | debug2: session_new: allocate (allocated 0 max 10)
+sftp-psql-demo-sftp22-1  | debug3: session_unused: session id 0 unused
+sftp-psql-demo-sftp22-1  | debug1: session_new: session 0
+sftp-psql-demo-sftp22-1  | debug1: SELinux support disabled
+sftp-psql-demo-db-1      | 2024-10-03 15:38:28.519 MST [40] LOG:  execute <unnamed>: SELECT login AS username,"password" as passwd,login as gecos,'/home/' || login AS homedir,'Access by SFTP only' as shell,uid,uid as gid FROM sftp_users WHERE uid = $1
+sftp-psql-demo-db-1      | 2024-10-03 15:38:28.519 MST [40] DETAIL:  parameters: $1 = '1982'
+sftp-psql-demo-db-1      | 2024-10-03 15:38:28.537 MST [41] LOG:  execute <unnamed>: SELECT login AS username,"password" as passwd,login as gecos,'/home/' || login AS homedir,'Access by SFTP only' as shell,uid,uid as gid FROM sftp_users WHERE login = $1
+sftp-psql-demo-db-1      | 2024-10-03 15:38:28.537 MST [41] DETAIL:  parameters: $1 = 'test'
+sftp-psql-demo-sftp22-1  | debug3: mm_request_send: entering, type 29
+sftp-psql-demo-sftp22-1  | debug3: mm_answer_pty: tty /dev/pts/0 ptyfd 4
+sftp-psql-demo-sftp22-1  | debug1: session_pty_req: session 0 alloc /dev/pts/0
+sftp-psql-demo-sftp22-1  | debug3: send packet: type 99
+sftp-psql-demo-sftp22-1  | debug3: receive packet: type 98
+sftp-psql-demo-sftp22-1  | debug1: server_input_channel_req: channel 0 request env reply 0
+sftp-psql-demo-sftp22-1  | debug1: session_by_channel: session 0 channel 0
+sftp-psql-demo-sftp22-1  | debug1: session_input_channel_req: session 0 req env
+sftp-psql-demo-sftp22-1  | debug2: Setting env 0: LANG=en_CA.UTF-8
+sftp-psql-demo-sftp22-1  | debug3: receive packet: type 98
+sftp-psql-demo-sftp22-1  | debug1: server_input_channel_req: channel 0 request shell reply 1
+sftp-psql-demo-sftp22-1  | debug1: session_by_channel: session 0 channel 0
+sftp-psql-demo-sftp22-1  | debug1: session_input_channel_req: session 0 req shell
+sftp-psql-demo-sftp22-1  | Starting session: shell on pts/0 for test from 192.168.48.1 port 53986 id 0
+sftp-psql-demo-sftp22-1  | debug2: fd 3 setting TCP_NODELAY
+sftp-psql-demo-sftp22-1  | debug3: set_sock_tos: set socket 3 IP_TOS 0x10
+sftp-psql-demo-sftp22-1  | debug2: channel 0: rfd 8 isatty
+sftp-psql-demo-sftp22-1  | debug2: fd 8 setting O_NONBLOCK
+sftp-psql-demo-sftp22-1  | debug3: fd 6 is O_NONBLOCK
+sftp-psql-demo-sftp22-1  | debug3: send packet: type 99
+sftp-psql-demo-sftp22-1  | debug1: Setting controlling tty using TIOCSCTTY.
+sftp-psql-demo-sftp22-1  | /dev/pts/0: No such file or directory
+sftp-psql-demo-sftp22-1  | open /dev/tty failed - could not set controlling tty: No such file or directory
+sftp-psql-demo-sftp22-1  | debug2: channel 0: read failed rfd 8 maxlen 32768: Input/output error
+sftp-psql-demo-sftp22-1  | debug2: channel 0: read failed
+sftp-psql-demo-sftp22-1  | debug2: chan_shutdown_read: channel 0: (i0 o0 sock -1 wfd 8 efd -1 [closed])
+sftp-psql-demo-sftp22-1  | debug2: channel 0: input open -> drain
+sftp-psql-demo-sftp22-1  | debug2: channel 0: ibuf empty
+sftp-psql-demo-sftp22-1  | debug2: channel 0: send eof
+sftp-psql-demo-sftp22-1  | debug3: send packet: type 96
+sftp-psql-demo-sftp22-1  | debug2: channel 0: input drain -> closed
+sftp-psql-demo-sftp22-1  | debug1: Received SIGCHLD.
+sftp-psql-demo-sftp22-1  | debug1: session_by_pid: pid 33
+sftp-psql-demo-sftp22-1  | debug1: session_exit_message: session 0 channel 0 pid 33
+sftp-psql-demo-sftp22-1  | debug2: channel 0: request exit-status confirm 0
+sftp-psql-demo-sftp22-1  | debug3: send packet: type 98
+sftp-psql-demo-sftp22-1  | debug1: session_exit_message: release channel 0
+sftp-psql-demo-sftp22-1  | debug2: channel 0: write failed
+sftp-psql-demo-sftp22-1  | debug2: chan_shutdown_write: channel 0: (i3 o0 sock -1 wfd 6 efd -1 [closed])
+sftp-psql-demo-sftp22-1  | debug2: channel 0: send eow
+sftp-psql-demo-sftp22-1  | debug3: send packet: type 98
+sftp-psql-demo-sftp22-1  | debug2: channel 0: output open -> closed
+sftp-psql-demo-sftp22-1  | debug3: mm_request_send: entering, type 30
+sftp-psql-demo-sftp22-1  | debug2: channel 0: send close
+sftp-psql-demo-sftp22-1  | debug3: send packet: type 97
+sftp-psql-demo-sftp22-1  | debug3: mm_request_receive: entering
+sftp-psql-demo-sftp22-1  | debug3: monitor_read: checking request 30
+sftp-psql-demo-sftp22-1  | debug3: mm_answer_pty_cleanup: entering
+sftp-psql-demo-sftp22-1  | debug1: session_by_tty: session 0 tty /dev/pts/0
+sftp-psql-demo-sftp22-1  | debug3: mm_session_close: session 0 pid 32
+sftp-psql-demo-sftp22-1  | debug3: mm_session_close: tty /dev/pts/0 ptyfd 4
+sftp-psql-demo-sftp22-1  | debug1: session_pty_cleanup2: session 0 release /dev/pts/0
+sftp-psql-demo-sftp22-1  | debug3: channel 0: will not send data after close
+sftp-psql-demo-sftp22-1  | debug3: receive packet: type 97
+sftp-psql-demo-sftp22-1  | debug2: channel 0: rcvd close
+sftp-psql-demo-sftp22-1  | debug3: receive packet: type 1
+sftp-psql-demo-sftp22-1  | Received disconnect from 192.168.48.1 port 53986:11: disconnected by user
+sftp-psql-demo-sftp22-1  | Disconnected from user test 192.168.48.1 port 53986
+sftp-psql-demo-sftp22-1  | debug1: do_cleanup
+sftp-psql-demo-sftp22-1  | debug3: PAM: sshpam_thread_cleanup entering
+sftp-psql-demo-sftp22-1  | debug1: temporarily_use_uid: 1982/1982 (e=1982/1982)
+sftp-psql-demo-sftp22-1  | debug1: restore_uid: (unprivileged)
+sftp-psql-demo-db-1      | 2024-10-03 15:38:28.568 MST [42] LOG:  execute <unnamed>: SELECT login AS username,"password" as passwd,login as gecos,'/home/' || login AS homedir,'Access by SFTP only' as shell,uid,uid as gid FROM sftp_users WHERE login = $1
+sftp-psql-demo-db-1      | 2024-10-03 15:38:28.568 MST [42] DETAIL:  parameters: $1 = 'test'
+sftp-psql-demo-sftp22-1  | syslogin_perform_logout: logout() returned an error
+sftp-psql-demo-sftp22-1  | debug3: session_unused: session id 0 unused
+sftp-psql-demo-sftp22-1  | debug3: mm_request_receive: entering
+sftp-psql-demo-sftp22-1  | debug1: do_cleanup
+sftp-psql-demo-sftp22-1  | debug1: PAM: cleanup
+sftp-psql-demo-sftp22-1  | debug1: PAM: closing session
+sftp-psql-demo-sftp22-1  | debug1: PAM: deleting credentials
+sftp-psql-demo-sftp22-1  | debug3: PAM: sshpam_thread_cleanup entering
+sftp-psql-demo-sftp22-1  | debug1: temporarily_use_uid: 1982/1982 (e=0/0)
+sftp-psql-demo-sftp22-1  | debug1: restore_uid: 0/0
+sftp-psql-demo-sftp22-1  | debug1: audit_event: unhandled event 12
+sftp-psql-demo-sftp22-1  | SFTP server is exiting.
+sftp-psql-demo-sftp22-1 exited with code 0

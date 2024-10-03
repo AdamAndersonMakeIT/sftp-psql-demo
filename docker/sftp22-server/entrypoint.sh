@@ -41,9 +41,10 @@ EOF
 sed -i '/Subsystem/d' /etc/ssh/sshd_config
 echo Subsystem sftp internal-sftp >> /etc/ssh/sshd_config
 echo ChrootDirectory /home/%u >> /etc/ssh/sshd_config
+echo LogLevel VERBOSE >> /etc/ssh/sshd_config
 
 # Start ssh server
 
-/usr/sbin/sshd -De
+/usr/sbin/sshd -ddddDe
 
 echo SFTP server is exiting.
