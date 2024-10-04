@@ -37,6 +37,18 @@ services:
     env_file:
       - docker/dev.env
 
+
+  sftp-deb:
+    depends_on:
+      - db
+    build: docker/sftp-deb-server
+    volumes:
+      - sftp_home:/home
+    ports:
+      - "10026:22"
+    env_file:
+      - docker/dev.env
+
   fixer:
     depends_on:
       - db

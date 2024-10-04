@@ -1,0 +1,4 @@
+session required pam_pgsql.so debug
+auth required pam_pgsql.so debug
+account required pam_pgsql.so debug
+password required pam_pgsql.so debug

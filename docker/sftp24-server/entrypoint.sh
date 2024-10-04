@@ -23,15 +23,15 @@ cat <<EOF > /etc/nss-pgsql-root.conf
 gshadowconnectionstring = hostaddr=$DBIP dbname=$DBNAME user=$FTPDBUSER password=$FTPDBPASSWORD connect_timeout=2
 shadowconnectionstring = hostaddr=$DBIP dbname=$DBNAME user=$FTPDBUSER password=$FTPDBPASSWORD connect_timeout=2
 connectionstring = hostaddr=$DBIP dbname=$DBNAME user=$FTPDBUSER password=$FTPDBPASSWORD connect_timeout=2
-shadowbyname = SELECT login AS shadow_name, "password" AS shadow_passwd, 14087 AS shadow_lstchg, 0 AS shadow_min, 99999 AS shadow_max, 7 AS shadow_warn, NULL AS shadow_inact, NULL AS shadow_expire, NULL AS shadow_flag FROM $TABLENAME WHERE login = \$1
-shadow = SELECT login AS shadow_name, "password" AS shadow_passwd, 14087 AS shadow_lstchg, 0 AS shadow_min, 99999 AS shadow_max, 7 AS shadow_warn, NULL AS shadow_inact, NULL AS shadow_expire, NULL AS shadow_flag FROM $TABLENAME
+shadowbyname = SELECT login AS shadow_name, password AS shadow_passwd, 14087 AS shadow_lstchg, 0 AS shadow_min, 99999 AS shadow_max, 7 AS shadow_warn, NULL AS shadow_inact, NULL AS shadow_expire, NULL AS shadow_flag FROM $TABLENAME WHERE login = \$1
+shadow = SELECT login AS shadow_name, password AS shadow_passwd, 14087 AS shadow_lstchg, 0 AS shadow_min, 99999 AS shadow_max, 7 AS shadow_warn, NULL AS shadow_inact, NULL AS shadow_expire, NULL AS shadow_flag FROM $TABLENAME
 gshadow = SELECT login AS shadow_name, 'x' AS shadow_passwd, 14087 AS shadow_lstchg, 0 AS shadow_min, 99999 AS shadow_max, 7 AS shadow_warn, NULL AS shadow_inact, NULL AS shadow_expire, NULL AS shadow_flag FROM $TABLENAME
 EOF
 chmod 0600 /etc/nss-pgsql-root.conf
 
 cat <<EOF > /etc/pam_pgsql.conf
 connect = hostaddr=$DBIP dbname=$DBNAME user=$FTPDBUSER password=$FTPDBPASSWORD connect_timeout=2
-auth_query = select "password" from $TABLENAME where login = %u
+auth_query = select password from $TABLENAME where login = %u
 acct_query = select false, false, false from $TABLENAME where login = %u
 
 pw_type = crypt
@@ -42,15 +42,15 @@ EOF
 # Enable SFTP
 
 #sed -i '/Subsystem/d' /etc/ssh/sshd_config
-#sed -i '/X11Forwarding/d' /etc/ssh/sshd_config
-#sed -i '/AllowTcpForwarding/d' /etc/ssh/sshd_config
+sed -i '/X11Forwarding/d' /etc/ssh/sshd_config
+sed -i '/AllowTcpForwarding/d' /etc/ssh/sshd_config
 #sed -i '/ForceCommand/d' /etc/ssh/sshd_config
 #sed -i '/ChrootDirectory/d' /etc/ssh/sshd_config
 sed -i '/LogLevel/d' /etc/ssh/sshd_config
 
 #echo Subsystem sftp internal-sftp >> /etc/ssh/sshd_config
-#echo X11Forwarding no >> /etc/ssh/sshd_config
-#echo AllowTcpForwarding no >> /etc/ssh/sshd_config
+echo X11Forwarding no >> /etc/ssh/sshd_config
+echo AllowTcpForwarding no >> /etc/ssh/sshd_config
 #echo ForceCommand internal-sftp >> /etc/ssh/sshd_config
 #echo ChrootDirectory /home/%u >> /etc/ssh/sshd_config
 echo LogLevel VERBOSE >> /etc/ssh/sshd_config
