@@ -2,7 +2,7 @@ FROM debian:bookworm
 
 WORKDIR /tmp
 RUN apt-get update \
-  && apt-get upgrade \
+  && apt-get -y upgrade \
   && apt-get install --no-install-recommends -y \
      openssh-server libnss-pgsql2 net-tools \
   && rm -rf /var/lib/apt/lists/* /var/log/dpkg.log* /var/log/apt/*
